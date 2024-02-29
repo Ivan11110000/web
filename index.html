@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Index</title>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="fondoicon">
+            <img id="logomain" src="icon/favicon.png">
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li class="icon"><i class="fa fa-bars" style="font-size: 24px;"></i></li>
+                    <li class="menu_item"><a href="#">Quiénes Somos</a></li>
+                    <li class="menu_item"><a href="#">Proyectos</a></li>
+                    <li class="menu_item"><a href="#">Servicios</a></li>
+                    <li class="menu_item"><a href="#">Productos</a></li>
+                    <li class="menu_item"><a href="contacto.html">Contacto</a></li>
+                    <li class="menu_item"><a href="#">Blog de Noticias</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="medio">
+            <div class="cuerpo">
+                <p class="titulo">Conectar para <em id="yellow">desconectar</em></p>
+                <a href="registro.html" class="subtitulo">Únete a nosotros</a> 
+            <div class="fotos">
+                <img src="img/landing.jpg">
+            </div>
+            <div class="barra"></div>
+            <div class="footer">
+                <p>© 2024 Vipers Social Network. Todos los derechos reservados.</p>
+              </div>
+            </main>
+    </div>
+    <script>
+        $(function(){
+            $(".icon").click(function(){
+                $(".menu_item").toggle(); 
+            });
+            $(window).resize(function(){
+                var anchura = $(this).width();
+                if (anchura > 576){
+                    $(".menu_item").show();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

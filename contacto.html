@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Contacto</title>
+</head>
+<body>
+    <div class="contenedor">
+    <header>
+        <div class="fondoicon">
+            <img id="logomain" src="icon/favicon.png">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li class="icon"><i class="fa fa-bars" style="font-size: 24px;"></i></li>
+                <li class="menu_item"><a href="#">Quiénes Somos</a></li>
+                <li class="menu_item"><a href="#">Proyectos</a></li>
+                <li class="menu_item"><a href="#">Servicios</a></li>
+                <li class="menu_item"><a href="#">Productos</a></li>
+                <li class="menu_item"><a href="#">Contacto</a></li>
+                <li class="menu_item"><a href="#">Blog de Noticias</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form action="http://procesar-incidencia.php" method="POST" target="_blank">
+        <p class="contacto">¿Quieres ponerte en contacto con nosotros?</p>
+    <fieldset>
+        <legend></legend>
+        <label>Nombre</label>
+        <br><input type="text" placeholder="Indica tu nombre" id="Nombre Usuario"required>
+        <br>
+        <br>
+        <label>¿Cómo quieres contactar?</label>
+        <br><select name="Departamento" id="Departamento Usuario">
+            <option value="6">(Selecciona una opción)</option>
+            <option value="6">Incidencia</option>
+            <option value="2">Trabajar con nosotros</option>
+            <option value="3">Ayudarnos a mejorar</option>
+            <option value="4">Dudas</option>
+            <option value="5">Información sobre nuestros servicios</option>
+            </select>
+        <br>
+        <br>
+        <label>Descripción</label>
+        <br><textarea rows="8" cols="40" name="Descripción" id="Descripción Usuario" placeholder="Indica tu comentario"></textarea>
+        <br>
+        <br>
+        <label>Ciudad</label>
+        <br><input type="text" placeholder="Indica tu ciudad" required>
+        <br>
+        <br>
+        <br><input type="submit" value="Enviar"> <input type="reset" value="Reiniciar Formulario">
+    </fieldset>
+</form>
+<div class="footer">
+        <p>© 2024 Vipers Social Network. Todos los derechos reservados.</p>
+      </div>
+    </main>
+<script>
+    $(function(){
+        $(".icon").click(function(){
+            $(".menu_item").toggle(); 
+        });
+        $(window).resize(function(){
+            var anchura = $(this).width();
+            if (anchura > 576){
+                $(".menu_item").show();
+            }
+        });
+    });
+</script>
+</div>
+</body>
+</html>
