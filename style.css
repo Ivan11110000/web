@@ -53,6 +53,7 @@ nav li:hover{
     text-align: center;
     font-size: 60px;
     margin-top: 90px;
+    font-weight: bolder;
 }
 #yellow{
     color: #f2cb8d;
