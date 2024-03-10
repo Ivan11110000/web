@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="icon/favicon.png" type="image/x-icon">
@@ -13,23 +12,20 @@
 <body>
     <div class="contenedor">
     <header>
-        <div class="fondoicon">
-            <img id="logomain" src="icon/favicon.png">
-        </div>
         <nav class="menu">
             <ul>
+                <a href="index.html"><img class="logomain" src="icon/favicon.png"></a>
                 <li class="icon"><i class="fa fa-bars" style="font-size: 24px;"></i></li>
-                <li class="menu_item"><a href="#">Quiénes Somos</a></li>
-                <li class="menu_item"><a href="#">Proyectos</a></li>
-                <li class="menu_item"><a href="#">Servicios</a></li>
-                <li class="menu_item"><a href="#">Productos</a></li>
-                <li class="menu_item"><a href="#">Contacto</a></li>
-                <li class="menu_item"><a href="#">Blog de Noticias</a></li>
+                <li class="menu_item"><a href="nosotros.html">Quiénes Somos</a></li>
+                <li class="menu_item"><a href="servicios.html">Servicios</a></li>
+                <li class="menu_item"><a href="productos.html">Productos</a></li>
+                <li class="menu_item"><a href="contacto.html">Contacto</a></li>
+                <li class="menu_item"><a href="blog.html">Blog de Noticias</a></li>
             </ul>
         </nav>
     </header>
     <form action="http://procesar-incidencia.php" method="POST" target="_blank">
-        <p class="contacto">¿Quieres ponerte en contacto con nosotros?</p>
+        <p class="titulo">¿Quieres ponerte en contacto con <em id="yellow">nosotros?</em></p>
     <fieldset>
         <legend></legend>
         <label>Nombre</label>
@@ -61,7 +57,6 @@
 <div class="footer">
         <p>© 2024 Vipers Social Network. Todos los derechos reservados.</p>
       </div>
-    </main>
 <script>
     $(function(){
         $(".icon").click(function(){

@@ -1,3 +1,6 @@
+*{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 body{
     width: 100%;
     margin: 0;
@@ -8,16 +11,18 @@ body{
     width: 100%;
 }
 .menu{
+    width: 100%;
+    position: fixed;
+    top: 0px;
     background-color: #0f4c81;
-    /* margin-top: 0px; */
-    /* padding-top: 12px; */
     box-sizing: border-box;
     font-size: 0px;
+    z-index: 200;
 }
-#logomain{
-    height: 43px;
-    width: 42px;
+.logomain{
     position: absolute;
+    height: 100%;
+    width: auto;
     left: 0px;
     top: 0px;
 }
@@ -33,13 +38,10 @@ nav li{
     display: inline-block;
     width: 150px;
     padding: 10px 2px;
-    /* background-color: #0f4c81; */
-    /* border:1px solid #000; */
     text-align: center;
     color: #fff;
 }
 nav li:hover{
-    /* background-color: #fff; */
     color: #f2cb8d;
 }
 .cuerpo{
@@ -52,44 +54,25 @@ nav li:hover{
     font-size: 60px;
     font-weight: bolder;
     font-family: cursive;
-    
+    margin-top: 90px;
 }
 #yellow{
     color: #f2cb8d;
 }
 .subtitulo{
     background-color: #8dc3f2;
-    /* border-radius: 30px; */
-    /* position: relative; */
     display: flex;
     justify-content: center;
     text-align: center;
-    /* margin-left: 0px;
-    margin-right: 0px;
-    margin: auto; */
-    /* margin-top: -40px; */
     color: #000;
     font-size: 22px;
     font-weight: 500px;
 }
-/* .fotos{
-    background: linear-gradient(to right, #0f4c81, #f2cb8d);
-    height: 680px;
-    position: absolute;
-    top: 220px;
-    left: 0px;
-    right: 0px;
-    margin: auto;
-} */
 .fotos img{
-    /* position: relative; */
     width: 100%;
     height: 680px;
     display: flex;
     flex-wrap: wrap;
-    /* margin-top: -350px; */
-    /* left: 0px;
-    right: 0px; */
 }
 .barra{
     position: relative;
@@ -103,8 +86,7 @@ nav li:hover{
     color: #fff;
     text-align: center;
     padding: 20px;
-    top: 256px;
-    /* width: 100%; */
+    top: 300px;
 }
 input, textarea, select, option{
     color: #f2cb8d;
@@ -112,17 +94,14 @@ input, textarea, select, option{
 }
 fieldset{
     display:flexbox;
-    /* width: 100%; */
     font-size: 20px;
     margin-top: 50px;
     background-color:#0f4c81;
     color:#fff;
 }
 legend{
-    /* background-color: #f2cb8d; */
     text-align: center;
     font-size: 30px;
-    /* width: 100%; */
     font-weight: bold;
     padding-top: 30px;
     color: #f2cb8d;
@@ -133,6 +112,248 @@ legend{
     font-weight: bold;
     color: #0f4c81;
 }
+.contenedor_productos {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+}
+.imagen_productos, .texto_productos{
+    width: 100%;
+    height: 50%;
+    background-color: #f2cb8d;
+    text-align: center;
+}
+.texto_productos{
+    background-color: #0f4c81;
+}
+.h2_productos{
+    color: #f2cb8d;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10px;
+}
+.fa-solid{
+    margin: 10px 10px;
+    color: white;
+}
+.parrafo_productos{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    color: #fff;
+}
+.precio_productos, .precio1_productos{
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.precio1_productos{
+    text-decoration: line-through;
+}
+.icon1_productos, .icon2_productos{
+    position: static;
+    margin-top: 10px;
+}
+.carrito, .bolsa{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+.imagen_productos img{
+    width: 100%;
+    max-width: 100%;
+    position: static;
+}
+.fa-solid:hover, .carrito:hover, .bolsa:hover{
+    color: #8dc3f2;
+}
+.servicios{
+    background-color:#0f4c81;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tarjeta{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+.tarjeta .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.tarjeta .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0px 10px 10px #000;
+}
+.tarjeta .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.tarjeta .front h3{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgb(0, 0, 0, 0.4);
+    text-align: center;
+}
+.tarjeta .back{
+    transform: perspective(1000px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 5px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0px 5px 10px #000;
+}
+.tarjeta .back .link{
+    border-top: 1px solid #94a4b3;
+    height: 80px;
+    line-height: 80px;
+    margin-top: 20px;
+}
+.tarjeta .back .link a {
+    color: #f2cb8d;
+}
+.tarjeta .back h3{
+    font-size: 30px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+.tarjeta .back p{
+    margin-top: 20px;
+    text-align: justify;
+}
+.tarjeta:hover .front{
+    transform: perspective(1000px)rotateY(180deg);
+}
+.tarjeta:hover .back{
+    transform: perspective(1000px)rotateY(360deg);
+}
+
+
+.fotos2{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container:after{
+    content: "";
+    display: block;
+    height: 0px;
+    clear: both;
+}
+.container{
+    width: 100%;
+    position: relative;
+}
+.container div{
+    width: 50%;
+    position: relative;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin: auto;
+}
+.container div img{
+    width: 100%;
+    height: 35%;
+    box-shadow: 0 0 10px #f2cb8d;
+    border: 5px solid #000;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    position: relative;
+}
+.container div img~span{
+    width: 100%;
+    display: block;
+    opacity: 0;
+    margin: auto;
+    padding: 2px 5px;
+    color: #fff;
+    background-color: #0f4c81;
+    box-shadow: 0 0 10px #f2cb8d;
+    text-align: center;
+}
+.container div img:hover+span{
+    opacity: 1;
+}
+.container:hover div{
+    opacity: 0.2;
+    transform: scale(0.7);
+    transition: 2s;
+}
+.container:hover div:hover{
+    opacity: 1;
+    transform: scale(1);
+    transition: 2s;
+}
+
+.proyectos{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f4c81;
+}
+.proyectos h3{
+    text-align: center;
+}
+.mision{
+    position: relative;
+    width: 550px;
+    height: 700px;
+}
+.mision img, .vision img, .valores img{
+    position: relative;
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+}
+.vision{
+    position: relative;
+    width: 550px;
+    height: 700px;
+}
+.valores{
+    position: relative;
+    width: 550px;
+    height: 700px;
+}
+.mision h3, .vision h3, .valores h3{
+    color: #fff;
+    font-size: 40px;
+}
+.mision, .vision, .valores{
+    font-size: 20px;
+    text-align: justify;
+    color: #fff;
+}
+
+.mision p, .vision p, .valores p{
+    padding: 10px;
+}
+
 @media screen and (max-width:992px){
     .icon{
         margin-right: 45px;
@@ -141,15 +362,34 @@ legend{
         height: 50%;
         width: 100%;
     }
+    .contenedor_productos{
+        height: auto;
+    }
+    .texto_productos, .imagen_productos{
+        width: 100%;
+        height: auto;
+    }
+    .icon2_productos{
+        left: auto;
+        margin-top: 10px;
+    }
+    .menu{
+        position: relative;
+    }
+    .fotos2 img{
+        height: 50%;
+        width: 50%;
+    }
+    .logomain{
+        width: 44px;
+        height: 44px;
+    }
 }
 @media screen and (min-width:992px){
-    /* nav{
-        display: flex;
-    }
-    .menu_item{
-        display: inline-block;
-    } */
     .icon{
         display: none;
+    }
+    .mision, .vision, .valores{
+        margin: 20px;
     }
 }

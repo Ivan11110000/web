@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Blog de noticias</title>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <a href="index.html"><img class="logomain" src="icon/favicon.png"></a>
+                <li class="icon"><i class="fa fa-bars" style="font-size: 24px;"></i></li>
+                <li class="menu_item"><a href="nosotros.html">Quiénes Somos</a></li>
+                <li class="menu_item"><a href="servicios.html">Servicios</a></li>
+                <li class="menu_item"><a href="productos.html">Productos</a></li>
+                <li class="menu_item"><a href="contacto.html">Contacto</a></li>
+                <li class="menu_item"><a href="blog.html">Blog de Noticias</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="fotos2">
+        <p class="titulo">Nuestro<em id="yellow"> blog</em></p>
+        <div class="container">
+            <div class="tamaño"><img src="img/mac.jpg"><span>Apple lanza su nueva gama de productos al mercado</span></div>
+            <div class="tamaño"><img src="img/boceto.jpg"><span>El mercado avanza a pasos escandalosos</span></div>
+            <div class="tamaño"><img src="img/grupo.jpg"><span>Se busca integrante en nuestro grupo de I+D</span></div>
+            <div class="tamaño"><img src="img/programacion.jpg"><span>Se espera un incremento del 25% de nuevos programadores</span></div>
+    </section>
+    <div class="footer">
+        <p>© 2024 Vipers Social Network. Todos los derechos reservados.</p>
+      </div>
+<script>
+$(function(){
+    $(".icon").click(function(){
+        $(".menu_item").toggle(); 
+    });
+    $(window).resize(function(){
+        var anchura = $(this).width();
+        if (anchura > 576){
+            $(".menu_item").show();
+        }
+    });
+});
+</script>
+</body>
+</html>

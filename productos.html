@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <title>Productos</title>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <nav class="menu">
+                <ul>
+                    <a href="index.html"><img class="logomain" src="icon/favicon.png"></a>
+                    <li class="icon"><i class="fa fa-bars" style="font-size: 24px;"></i></li>
+                    <li class="menu_item"><a href="nosotros.html">Quiénes Somos</a></li>
+                    <li class="menu_item"><a href="servicios.html">Servicios</a></li>
+                    <li class="menu_item"><a href="productos.html">Productos</a></li>
+                    <li class="menu_item"><a href="contacto.html">Contacto</a></li>
+                    <li class="menu_item"><a href="blog.html">Blog de Noticias</a></li>
+                </ul>
+            </nav>
+        </header>
+        <p class="titulo">Nuestra <em id="yellow">tienda</em></p>
+
+    <div class="contenedor_productos">
+        <div class="imagen_productos">
+            <img src="img/RTX.png">
+        </div>
+        <div class="texto_productos">
+        <h2 class="h2_productos">RTX 4090</h2>
+        <p class="parrafo_productos">Disfruta de la nueva generación de gráficas de Nvidia</p>
+        <h2 class="precio1_productos">900€</h2>
+        <h2 class="h2_productos">750€</h2>
+        <div class="icon1_productos">
+           <p>
+               <i class="fa-solid fa-bag-shopping"></i><a class="bolsa" href="#">Comprar</a>
+           </p>
+        </div>
+        <div class="icon2_productos">
+        <p>
+               <i class="fa-solid fa-cart-shopping"></i><a class="carrito" href="#">Añadir al carrito</a>
+        </p>
+        </div>
+        </div>
+    </div>
+    <div class="contenedor_productos">
+        <div class="imagen_productos">
+            <img src="img/RTX.png">
+        </div>
+        <div class="texto_productos">
+        <h2 class="h2_productos">RTX 4090</h2>
+        <p class="parrafo_productos">Disfruta de la nueva generación de gráficas de Nvidia</p>
+        <h2 class="precio1_productos">900€</h2>
+        <h2 class="h2_productos">750€</h2>
+        <div class="icon1_productos">
+           <p>
+               <i class="fa-solid fa-bag-shopping"></i><a class="bolsa" href="#">Comprar</a>
+           </p>
+        </div>
+        <div class="icon2_productos">
+        <p>
+               <i class="fa-solid fa-cart-shopping"></i><a class="carrito" href="#">Añadir al carrito</a>
+        </p>
+        </div>
+        </div>   
+    </div>
+    <div class="footer">
+        <p>© 2024 Vipers Social Network. Todos los derechos reservados.</p>
+      </div>
+    <script>
+        $(function(){
+            $(".icon").click(function(){
+                $(".menu_item").toggle(); 
+            });
+            $(window).resize(function(){
+                var anchura = $(this).width();
+                if (anchura > 576){
+                    $(".menu_item").show();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
